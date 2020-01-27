@@ -1,12 +1,12 @@
 import React from 'react';
 import axios from "axios";
-const state = { persons : []}
-const API_URL = 'http://localhost/reactjs_ci/welcome';
-const url = `${API_URL}/getpromo/`;
-axios.get(url)
-.then(function(response){
-   console.log(response.data)
-})
+//const state = { persons : []}
+// const API_URL = 'http://localhost/reactjs_ci/welcome';
+// const url = `${API_URL}/getpromo/`;
+// axios.get(url)
+// .then(function(response){
+//    console.log(response.data)
+// })
 
 const Usertable = props => (
     

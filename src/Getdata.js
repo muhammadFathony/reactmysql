@@ -13,7 +13,7 @@ class Getdata extends Component {
         axios.get(url)
         .then(res => {
             //const persons = res.data;
-            this.setState({persons : res.data});
+            this.setState({persons : res.data.dataPromo});
             console.log(this.state.persons)
         })
     }
@@ -23,7 +23,10 @@ class Getdata extends Component {
             <div>
                 <h1>OKE</h1>
                 <ul>
-                    {this.state.persons.map(person => <li key={person.id_promo}>{person.judul}</li>)}
+                    {
+                        this.state.persons.map(person => 
+                        <li key={person.id_promo}>{person.judul} <button>delete</button></li>
+                    )}
                 </ul>
             </div>
         )
