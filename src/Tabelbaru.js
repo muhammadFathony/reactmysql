@@ -3,6 +3,7 @@ import React, {  useState, Component } from "react"
 import "./css/primitive.css"
 import UserTable from './Usertable_v2'
 import axios from "axios"
+import Formadd from './Formadd'
 const API_URL = 'http://localhost/reactjs_ci/welcome';
 const initialFormState = { id: null, name: '', username: '' }
 class Tabelbaru extends Component{
@@ -21,12 +22,17 @@ class Tabelbaru extends Component{
         })
     }
 
-        
+    tambah = (e) =>{
+        e.preventDefault();
+    }
+
     render(){
         return(
             <div>
-                <h1>OK</h1>
+                <h1>Tabel Promo</h1>
                 <UserTable a={this.state.promo} />
+                <h1>Tambah Promo</h1>
+                <Formadd a={this.state.promo} />
             </div>
         )
     }

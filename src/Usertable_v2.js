@@ -8,16 +8,6 @@ class Tabelbaru extends Component {
     state = {
         persons : []
     }
-
-    componentDidMount(){
-        const url = `${API_URL}/getpromo/`;
-        axios.get(url)
-        .then(res => {
-            //const persons = res.data;
-            this.setState({persons : res.data});
-            //console.log(this.state.persons)
-        })
-    }
     
     render(){
         return(
